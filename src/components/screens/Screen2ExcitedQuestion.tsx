@@ -40,7 +40,7 @@ export const Screen2ExcitedQuestion: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 py-6 text-center select-none">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-center px-3 py-4 text-center select-none min-h-[calc(100dvh-6.5rem)]">
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#831843] font-handwriting tracking-wide mb-6 animate-in fade-in slide-in-from-top-4 duration-500">
         {data.greetingTitle}

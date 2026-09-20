@@ -98,7 +98,7 @@ export const Screen3Balloons: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[92vh] flex flex-col items-center justify-between px-4 py-8 select-none">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-between px-3 py-4 select-none min-h-[calc(100dvh-6.5rem)]">
       {/* Top Header & Counter Row */}
       <div className="w-full max-w-md flex items-center justify-between mt-2">
         <div className="w-20" />

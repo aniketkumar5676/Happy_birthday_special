@@ -46,7 +46,7 @@ export const Screen6EnvelopeLetter: React.FC = () => {
     setDisplayedText('');
     setIsTypingDone(false);
 
-    const speedMs = 20; // authentic handwriting typewriter pace
+    const speedMs = 18;
     const timer = setInterval(() => {
       typingIndexRef.current += 1;
       const currentSub = fullText.slice(0, typingIndexRef.current);
@@ -56,9 +56,9 @@ export const Screen6EnvelopeLetter: React.FC = () => {
         clearInterval(timer);
         setIsTypingDone(true);
         confetti({
-          particleCount: 40,
-          spread: 50,
-          origin: { y: 0.75 },
+          particleCount: 45,
+          spread: 55,
+          origin: { y: 0.7 },
           colors: ['#fda4af', '#f43f5e', '#ec4899'],
         });
       }
@@ -74,7 +74,7 @@ export const Screen6EnvelopeLetter: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[92vh] flex flex-col items-center justify-between px-3 py-6 select-none">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-between px-3 py-3 select-none min-h-[calc(100dvh-6rem)]">
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl font-bold text-[#831843] font-serif-display italic tracking-tight text-center mt-1">
         {isOpen ? data.letterTitle : data.envelopeTitle}
@@ -127,18 +127,18 @@ export const Screen6EnvelopeLetter: React.FC = () => {
             </div>
           </div>
         ) : (
-          /* Opened Unfolded Letter Sheet */
+          /* Opened Unfolded Letter Sheet - Clean, Highly Readable, Non-Cursive Warm Serif */
           <div
             onClick={!isTypingDone ? handleFastForward : undefined}
-            className="relative w-full bg-[#fffdfa] rounded-2xl shadow-[0_16px_40px_rgba(244,114,182,0.25)] border border-pink-200/80 p-5 sm:p-6 text-slate-800 flex flex-col justify-between max-h-[72vh] overflow-y-auto animate-in zoom-in-95 duration-500"
+            className="relative w-full bg-[#fffdfa] rounded-2xl shadow-[0_16px_40px_rgba(244,114,182,0.22)] border border-pink-200/80 p-5 sm:p-6 text-slate-800 flex flex-col justify-between max-h-[58vh] sm:max-h-[62vh] overflow-y-auto animate-in zoom-in-95 duration-500"
           >
             {/* Top Seal Stamp */}
-            <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gradient-to-tr from-rose-600 to-pink-500 shadow-md flex items-center justify-center border border-pink-200">
-              <Heart className="w-4 h-4 text-white fill-current" />
+            <div className="absolute top-4 right-4 w-7 h-7 rounded-full bg-gradient-to-tr from-rose-600 to-pink-500 shadow-md flex items-center justify-center border border-pink-200">
+              <Heart className="w-3.5 h-3.5 text-white fill-current" />
             </div>
 
-            {/* Letter Body with Handwriting Typewriter Effect */}
-            <div className="font-letter text-base sm:text-lg leading-relaxed text-[#4c0519] pr-8 whitespace-pre-line font-medium min-h-[260px]">
+            {/* Letter Body with Clear, Readable Literary Typography */}
+            <div className="font-letter text-[15px] sm:text-[16.5px] leading-[1.75] sm:leading-[1.85] text-stone-900 pr-6 whitespace-pre-line font-normal">
               {displayedText}
               {!isTypingDone && (
                 <span className="inline-block w-1.5 h-4 bg-rose-500 ml-1 animate-pulse" />
@@ -147,44 +147,35 @@ export const Screen6EnvelopeLetter: React.FC = () => {
 
             {/* Cute Kitten Friends Illustration at Bottom Right */}
             <div className="w-full flex items-end justify-between mt-4 pt-2 border-t border-pink-100/60">
-              <div className="text-[11px] text-pink-400 italic">
-                {!isTypingDone ? '(tap to skip animation)' : ''}
+              <div className="text-[11px] text-pink-500/80 font-sans-clean font-medium">
+                {!isTypingDone ? '(tap to reveal all)' : ''}
               </div>
 
               {/* Cute Kittens SVG */}
-              <div className="w-16 h-14 relative select-none">
+              <div className="w-14 h-12 relative select-none">
                 <svg viewBox="0 0 100 80" className="w-full h-full drop-shadow-sm">
                   {/* Left Kitten (Grey/Tricolor) */}
                   <g transform="translate(15, 20)">
-                    {/* Ears */}
                     <polygon points="10,5 5,-5 20,0" fill="#94a3b8" />
                     <polygon points="35,0 50,-5 45,5" fill="#94a3b8" />
-                    {/* Head */}
                     <circle cx="28" cy="16" r="18" fill="#cbd5e1" />
-                    {/* Eyes */}
                     <circle cx="22" cy="14" r="2.5" fill="#1e293b" />
                     <circle cx="34" cy="14" r="2.5" fill="#1e293b" />
                     <ellipse cx="28" cy="19" rx="2" ry="1.5" fill="#f43f5e" />
-                    {/* Cheeks */}
                     <circle cx="18" cy="18" r="3" fill="#fda4af" opacity="0.6" />
                     <circle cx="38" cy="18" r="3" fill="#fda4af" opacity="0.6" />
                   </g>
                   {/* Right Kitten (Cream Ginger) */}
                   <g transform="translate(48, 18)">
-                    {/* Ears */}
                     <polygon points="10,5 5,-5 20,0" fill="#fb923c" />
                     <polygon points="35,0 50,-5 45,5" fill="#fb923c" />
-                    {/* Head */}
                     <circle cx="28" cy="16" r="18" fill="#fed7aa" />
-                    {/* Eyes (happy sleeping arches) */}
                     <path d="M20,15 Q23,12 26,15" stroke="#7c2d12" strokeWidth="1.5" fill="none" />
                     <path d="M30,15 Q33,12 36,15" stroke="#7c2d12" strokeWidth="1.5" fill="none" />
                     <ellipse cx="28" cy="18" rx="2" ry="1.5" fill="#f43f5e" />
-                    {/* Cheeks */}
                     <circle cx="18" cy="18" r="3" fill="#fda4af" opacity="0.6" />
                     <circle cx="38" cy="18" r="3" fill="#fda4af" opacity="0.6" />
                   </g>
-                  {/* Cute mini heart between them */}
                   <path d="M48,10 C46,6 40,8 44,14 C48,18 52,14 56,14 C60,8 54,6 52,10 Z" fill="#f43f5e" transform="scale(0.6) translate(36, -8)" />
                 </svg>
               </div>
@@ -193,8 +184,8 @@ export const Screen6EnvelopeLetter: React.FC = () => {
         )}
       </div>
 
-      {/* Button to Final Surprise Screen */}
-      <div className="w-full max-w-xs flex justify-center pb-2">
+      {/* Button to Final Surprise Screen - elevated with bottom padding to avoid footer overlap */}
+      <div className="w-full max-w-xs flex justify-center pb-6">
         {isOpen && (
           <button
             onClick={() => nextScreen()}

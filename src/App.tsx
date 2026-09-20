@@ -29,7 +29,7 @@ const BirthdayContent: React.FC = () => {
       <PersistentAudioPlayer />
 
       {/* Main Interactive Screen Content */}
-      <main className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-xl mx-auto pb-14">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-xl mx-auto px-2 pt-2 pb-24 min-h-[calc(100dvh-5rem)]">
         {currentScreen === 1 && <Screen1QrCard />}
         {currentScreen === 2 && <Screen2ExcitedQuestion />}
         {currentScreen === 3 && <Screen3Balloons />}

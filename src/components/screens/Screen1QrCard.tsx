@@ -20,7 +20,7 @@ export const Screen1QrCard: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[92vh] flex flex-col items-center justify-center px-4 py-8 select-none">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-center px-3 py-4 select-none min-h-[calc(100dvh-6.5rem)]">
       {/* Outer Heart Card Container */}
       <div
         onClick={handleCardClick}

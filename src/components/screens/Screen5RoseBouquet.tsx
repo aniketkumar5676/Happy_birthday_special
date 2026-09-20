@@ -35,7 +35,7 @@ export const Screen5RoseBouquet: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[92vh] flex flex-col items-center justify-between px-4 py-6 select-none overflow-hidden">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-between px-3 py-3 select-none overflow-hidden min-h-[calc(100dvh-6.5rem)]">
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl font-bold text-[#831843] font-serif-display tracking-tight text-center mt-2 animate-in fade-in duration-500">
         {data.bouquetHeader}

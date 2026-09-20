@@ -52,7 +52,7 @@ export const Screen7GiftSurprise: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-[92vh] flex flex-col items-center justify-between px-4 py-8 select-none">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-between px-3 py-4 select-none min-h-[calc(100dvh-6.5rem)]">
       {/* Header */}
       <div className="text-center mt-2">
         <h1 className="text-3xl sm:text-4xl font-bold text-[#831843] font-serif-display italic tracking-tight">

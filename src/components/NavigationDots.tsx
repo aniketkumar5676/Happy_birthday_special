@@ -17,7 +17,7 @@ export const NavigationDots: React.FC = () => {
   ];
 
   return (
-    <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex items-center gap-1.5 px-3 py-1.5 bg-white/75 backdrop-blur-md rounded-full shadow-sm border border-pink-200/70 text-xs">
+    <div className="fixed bottom-3.5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-1.5 px-3.5 py-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-[0_4px_20px_rgba(244,114,182,0.2)] border border-pink-200/80 text-xs select-none">
       {/* Back button (if screen > 1) */}
       {currentScreen > 1 && (
         <button
