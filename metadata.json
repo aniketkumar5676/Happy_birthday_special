@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Anshi",
+  "description": "Interactive musical birthday surprise website featuring interactive balloon pop, microphone candle blow, rose bouquet compliments, animated love letter, and tap-to-open gift card.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
